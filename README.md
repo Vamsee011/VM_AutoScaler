@@ -60,7 +60,10 @@ This project implements an automatic virtual machine (VM) scaling system using P
 
 ## ✅ Sample Output
 Current CPU Usage: 42.0%
+
 CPU usage exceeded threshold! Initiating scaling...
+
 Cloning vm2 to create vm3...
+
 Scaling complete: vm3 created
 
