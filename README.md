@@ -31,11 +31,11 @@ This project implements an automatic virtual machine (VM) scaling system using P
 
 ### 1️⃣ Install Dependencies (Host & VM)
 
-pip install -r requirements.txt
+  pip install -r requirements.txt
 
-Ensure libvirt & virt-clone are installed on the host:
+- Ensure libvirt & virt-clone are installed on the host:
 
-sudo apt install libvirt-clients virt-manager virtinst
+  sudo apt install libvirt-clients virt-manager virtinst
 
 ### 2️⃣ Run the Monitor (Inside VM1)
 - Edit monitor.py to set the correct host IP:
@@ -50,7 +50,7 @@ sudo apt install libvirt-clients virt-manager virtinst
 - Ensure that vm2 exists and is shut off (not running).
 - Then start the scaler service:
 
-python3 scaler.py
+  python3 scaler.py
 
 ### 4️⃣ Trigger Load (From Host)
 - Use ApacheBench or any load generator to simulate CPU spike:
