@@ -65,15 +65,3 @@ CPU usage exceeded threshold! Initiating scaling...
 Cloning vm2 to create vm3...
 Scaling complete: vm3 created
 
-
-## 📐 Architecture (Simplified)
-
-+---------------------+         +-------------------------+
-|     Host Machine    |         |        VM1              |
-|---------------------|         |-------------------------|
-| scaler.py (Flask)   | <--->   | monitor.py (CPU API)    |
-| libvirt + virt-clone|         | psutil + Flask          |
-+---------------------+         +-------------------------+
-             |
-             +--> vm3, vm4, ... (spawned VMs)
-
