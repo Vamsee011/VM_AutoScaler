@@ -15,7 +15,7 @@ This project implements an automatic virtual machine (VM) scaling system using P
 
 ## Components
 
-- monitor.py — Runs inside VM1, monitors CPU load and exposes a `/cpu` API via Flask.
+- monitor.py — Runs inside VM1, monitors CPU load and exposes a /cpu API via Flask.
 - scaler.py — Runs on the host, polls CPU stats and triggers VM cloning using libvirt tools.
 
 
@@ -29,7 +29,7 @@ This project implements an automatic virtual machine (VM) scaling system using P
 
 ## Setup & Usage
 
-### 1️⃣ Install Dependencies (Host & VM)
+### 1️. Install Dependencies (Host & VM)
 
   pip install -r requirements.txt
 
@@ -37,7 +37,7 @@ This project implements an automatic virtual machine (VM) scaling system using P
 
   sudo apt install libvirt-clients virt-manager virtinst
 
-### 2️⃣ Run the Monitor (Inside VM1)
+### 2️. Run the Monitor (Inside VM1)
 - Edit monitor.py to set the correct host IP:
 
   HOST_IP = "<host-ip>"
@@ -46,13 +46,13 @@ This project implements an automatic virtual machine (VM) scaling system using P
 
   python3 monitor.py
 
-### 3️⃣ Run the Scaler (On Host)
+### 3️. Run the Scaler (On Host)
 - Ensure that vm2 exists and is shut off (not running).
 - Then start the scaler service:
 
   python3 scaler.py
 
-### 4️⃣ Trigger Load (From Host)
+### 4️. Trigger Load (From Host)
 - Use ApacheBench or any load generator to simulate CPU spike:
 
   ab -n 5000 -c 50 http://<vm1-ip>:5000/cpu
